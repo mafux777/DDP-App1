@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Great Circle Distance between 2 points on Earth</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Great Circle Distance between 2 points on Earth">
+  <meta name="author" content="mafux777">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Great Circle Distance between 2 points on Earth</h1>
+    <h2>Demonstrating shiny</h2>
+    <p>mafux777<br/>Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction (Slide 2)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is part of an assignment for the &quot;Developing Data Products&quot; class on
+Coursera.</p>
+
+<p>The assignment was to create an interactive shiny application taking some user
+input, performing some calculation, and displaying the results.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Great Circle Distance Calculation (Slide 3)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application calculates the Great Circle Distance between two points on
+Earth. This is the shortest distance between two points on Earth and is often
+the chosen path for aircraft travelling between the two points.</p>
+
+<p>Given origin and destination in radian coordinates (latitude $ \lambda $ and
+longitude $ \phi $), the Haversine formula for a perfect sphere looks like this:</p>
+
+<p>\(2 r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2 - \phi_1}{2}\right) +
+\cos(\phi_1) \cos(\phi_2)\sin^2\left(\frac{\lambda_2 -
+\lambda_1}{2}\right)}\right)\)</p>
+
+<p>[<a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>]</p>
+
+<p>Hint: the Latex formula code is available in the Wikipedia article if you click
+on edit and look at the source code.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Further Remarks for this Application (Slide 4)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Haversine formula does not take into account that the earth is elliptical,
+therefore I have implemented a more sophisticated algorithm described here
+([<a href="http://www.r-bloggers.com/great-circle-distance-calculations-in-r/%5D">http://www.r-bloggers.com/great-circle-distance-calculations-in-r/]</a>).</p>
+
+<p>If you want to check out the application with some coordinates and only have
+lat/lon in degrees, you can divide by 180 and multiply by $ \pi $.</p>
+
+<p>Southern latitudes and western longitudes are designated as negative. For
+example, New York is 40°42′46″N 74°00′21″W, which would translate into $ \lambda
+= 0.71057 \; \phi = -1.29164 $</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Screenshot (Slide 5)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/Screenshot-750px.png" alt="2648"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction (Slide 2)'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Great Circle Distance Calculation (Slide 3)'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Further Remarks for this Application (Slide 4)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Screenshot (Slide 5)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
