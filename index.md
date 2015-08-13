@@ -19,6 +19,8 @@ Coursera.
 The assignment was to create an interactive shiny application taking some user
 input, performing some calculation, and displaying the results.
 
+Find the app here: https://mafux777.shinyapps.io/App1
+
 --- .class #id
 
 ## Great Circle Distance Calculation (Slide 3)
@@ -52,6 +54,15 @@ lat/lon in degrees, you can divide by 180 and multiply by $ \pi $.
 Southern latitudes and western longitudes are designated as negative. For
 example, New York is 40°42′46″N 74°00′21″W, which would translate into $ \lambda
 = 0.71057 \; \phi = -1.29164 $
+
+
+```r
+(40+42/60+46/3600) * pi / 180
+```
+
+```
+## [1] 0.710572
+```
 
 --- .class #id
 
